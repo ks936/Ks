@@ -1,0 +1,782 @@
+{
+  "schema_version": "1.0",
+  "title": "Work, Energy and Power — 50 Original JEE Advanced Practice Numericals",
+  "subject": "Physics",
+  "chapter": "Work, Energy and Power",
+  "source_note": "Original practice questions; no question is attributed to an official JEE paper.",
+  "default_marking": {
+    "correct": 4,
+    "incorrect": 0,
+    "unanswered": 0
+  },
+  "questions": [
+    {
+      "id": "WEP-ADV-001",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A particle moves along x under F(x)=6x−2x² N from x=0 to x=2 m. Find the work done.",
+      "options": [],
+      "correct_answer": "20/3 J",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "W=∫₀²(6x−2x²)dx=[3x²−(2/3)x³]₀²=20/3 J."
+    },
+    {
+      "id": "WEP-ADV-002",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg particle starts from rest under F(x)=4x N from x=0 to x=3 m. Find its speed at x=3 m.",
+      "options": [],
+      "correct_answer": "3√2 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "W=∫₀³4x dx=18 J. By work-energy, 18=(1/2)(2)v², so v=3√2 m/s."
+    },
+    {
+      "id": "WEP-ADV-003",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 1 kg particle moves at 4 m/s. A force F(x)=−2x N acts from x=0 to x=2 m. Find final kinetic energy.",
+      "options": [],
+      "correct_answer": "4 J",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Initial K=8 J. Work=∫₀²−2x dx=−4 J. Final K=8−4=4 J."
+    },
+    {
+      "id": "WEP-ADV-004",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 3 kg block starts from rest on a frictionless track. F(x)=12−3x N acts from x=0 to 4 m. Find final speed.",
+      "options": [],
+      "correct_answer": "4 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "W=∫₀⁴(12−3x)dx=24 J. (1/2)(3)v²=24, hence v=4 m/s."
+    },
+    {
+      "id": "WEP-ADV-005",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A particle starts from rest under F(x)=8x−4 N from x=0 to 3 m. Find its kinetic energy at x=3 m.",
+      "options": [],
+      "correct_answer": "24 J",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "W=∫₀³(8x−4)dx=24 J. Starting from rest, final K=24 J."
+    },
+    {
+      "id": "WEP-ADV-006",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A spring k=200 N/m is compressed by 0.10 m and launches a 0.50 kg block on a frictionless surface. Find speed at natural length.",
+      "options": [],
+      "correct_answer": "2 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Spring energy=(1/2)kx²=1 J. Set 1=(1/2)(0.5)v²; v=2 m/s."
+    },
+    {
+      "id": "WEP-ADV-007",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg block moving at 3 m/s compresses a spring k=100 N/m on a frictionless surface. Find maximum compression.",
+      "options": [],
+      "correct_answer": "3√2/10 m",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "At maximum compression, (1/2)mv²=(1/2)kx². Thus x=v√(m/k)=3√2/10 m≈0.424 m."
+    },
+    {
+      "id": "WEP-ADV-008",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 1 kg block attached to k=50 N/m is released from rest at x=0.20 m. Find speed at x=0.12 m on a frictionless surface.",
+      "options": [],
+      "correct_answer": "√1.28 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "v²=(k/m)(A²−x²)=50(0.04−0.0144)=1.28; v≈1.131 m/s."
+    },
+    {
+      "id": "WEP-ADV-009",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 0.40 kg block at 5 m/s compresses a spring k=250 N/m on a rough surface with μ=0.20. Take g=10 m/s². Find maximum compression.",
+      "options": [],
+      "correct_answer": "0.168 m (approx.)",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Initial K=5 J. At compression x: 125x²+0.8x=5. Positive root x=(-0.8+√2500.64)/250≈0.168 m."
+    },
+    {
+      "id": "WEP-ADV-010",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A spring k=400 N/m compressed by 0.15 m launches a 1 kg block on a frictionless surface. Find speed at natural length.",
+      "options": [],
+      "correct_answer": "3 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Spring energy=(1/2)(400)(0.15²)=4.5 J. (1/2)v²=4.5, so v=3 m/s."
+    },
+    {
+      "id": "WEP-ADV-011",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 5 kg block moves at 8 m/s on a horizontal surface with μk=0.4. Take g=10 m/s². Find stopping distance.",
+      "options": [],
+      "correct_answer": "8 m",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Deceleration=μg=4 m/s². Stopping distance u²/(2a)=64/8=8 m."
+    },
+    {
+      "id": "WEP-ADV-012",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg block is pulled 5 m by a 20 N force at 60° above horizontal. μk=0.25, g=10 m/s²; starts at rest. Find final speed.",
+      "options": [],
+      "correct_answer": "√46.65 m/s (approx.)",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "N=20−20sin60≈2.68 N; friction≈0.67 N. Net work=(10−0.67)5≈46.65 J. v²=2W/m≈46.65."
+    },
+    {
+      "id": "WEP-ADV-013",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 4 kg block is on a 30° incline with μs=1/√3. It is released from rest. Find its acceleration.",
+      "options": [],
+      "correct_answer": "0 m/s²",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "mg sin30=20 N. Maximum static friction=μs mg cos30=20 N, enough to hold it; acceleration is zero."
+    },
+    {
+      "id": "WEP-ADV-014",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 1 kg block moving at 10 m/s crosses a 5 m rough patch with μk=0.5, then enters a frictionless track. Take g=10 m/s². Find exit speed.",
+      "options": [],
+      "correct_answer": "5√2 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Initial K=50 J; friction work=−25 J. Final K=25 J, so v=√50=5√2 m/s."
+    },
+    {
+      "id": "WEP-ADV-015",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg block moving at 6 m/s stops under a constant opposing force over 9 m. Find force magnitude.",
+      "options": [],
+      "correct_answer": "4 N",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "ΔK=−36 J. Since work=−9F=−36 J, F=4 N."
+    },
+    {
+      "id": "WEP-ADV-016",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 3 kg block is projected up a 30° incline at 10 m/s. μk=0.2, g=10 m/s². Find distance before stopping.",
+      "options": [],
+      "correct_answer": "100/[2(5+√3)] m ≈7.43 m",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Retarding acceleration=10(1/2+0.2√3/2)=5+√3 m/s². s=u²/(2a)=100/[2(5+√3)]."
+    },
+    {
+      "id": "WEP-ADV-017",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 10 kg block is pulled 4 m by a 50 N force at 37° above horizontal. μk=0.2, g=10; sin37=0.6, cos37=0.8. Starting from rest, find final speed.",
+      "options": [],
+      "correct_answer": "√20.8 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "N=100−30=70 N; friction=14 N; horizontal force=40 N. Net work=(40−14)4=104 J; 5v²=104, so v=√20.8 m/s."
+    },
+    {
+      "id": "WEP-ADV-018",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg block slides 5 m down a 37° incline from rest. μk=0.25, g=10, sin37=0.6, cos37=0.8. Find speed at bottom.",
+      "options": [],
+      "correct_answer": "2√10 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Down-slope gravity=12 N; friction=4 N. Net work=8·5=40 J. v²=40, so v=2√10 m/s."
+    },
+    {
+      "id": "WEP-ADV-019",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 1 kg block moving at 4 m/s is pushed by 10 N along motion for 3 m; friction is 2 N. Find final speed.",
+      "options": [],
+      "correct_answer": "8 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Initial K=8 J. Net work=(10−2)3=24 J, so final K=32 J and v=8 m/s."
+    },
+    {
+      "id": "WEP-ADV-020",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg block moves at 5 m/s. A 5 N forward force acts while friction is 5 N over 4 m. Find final speed.",
+      "options": [],
+      "correct_answer": "5 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Applied force and friction cancel; net work is zero, so kinetic energy and speed remain unchanged."
+    },
+    {
+      "id": "WEP-ADV-021",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A motor lifts a 20 kg load at constant speed 0.5 m/s. Take g=10 m/s². Find useful power.",
+      "options": [],
+      "correct_answer": "100 W",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "F=mg=200 N. P=Fv=100 W."
+    },
+    {
+      "id": "WEP-ADV-022",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A car travels at 20 m/s against 500 N resistance. Find engine power required to maintain constant speed.",
+      "options": [],
+      "correct_answer": "10 kW",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Driving force equals resistance. P=Fv=500×20=10000 W."
+    },
+    {
+      "id": "WEP-ADV-023",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A particle has speed v=2t m/s and net force 6 N along its motion. Find instantaneous power at t=4 s.",
+      "options": [],
+      "correct_answer": "48 W",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "At t=4 s, v=8 m/s. P=Fv=6×8=48 W."
+    },
+    {
+      "id": "WEP-ADV-024",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A pump raises 500 kg of water by 12 m in 30 s. g=10 m/s² and efficiency 75%. Find input power.",
+      "options": [],
+      "correct_answer": "8/3 kW",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Useful energy=60000 J, useful power=2000 W. Input power=2000/0.75=2666.67 W."
+    },
+    {
+      "id": "WEP-ADV-025",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 1200 kg vehicle accelerates uniformly from 10 to 25 m/s in 10 s. Resistance is 600 N. Find average engine power.",
+      "options": [],
+      "correct_answer": "42 kW",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "a=1.5 m/s², engine force=ma+R=2400 N. Average speed=17.5 m/s; average power=42000 W."
+    },
+    {
+      "id": "WEP-ADV-026",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg particle's speed rises from 3 to 7 m/s in 2 s. Find average net power.",
+      "options": [],
+      "correct_answer": "20 W",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "ΔK=(1/2)(2)(49−9)=40 J. Average power=40/2=20 W."
+    },
+    {
+      "id": "WEP-ADV-027",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "An 800 kg lift moves upward at 2 m/s with upward acceleration 1 m/s². g=10 m/s². Find motor power.",
+      "options": [],
+      "correct_answer": "17.6 kW",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Motor force=m(g+a)=8800 N. P=Fv=17600 W."
+    },
+    {
+      "id": "WEP-ADV-028",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "Resistance on a vehicle is R=kv. At 10 m/s, R=200 N. Find power needed to overcome resistance at 20 m/s.",
+      "options": [],
+      "correct_answer": "8 kW",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Resistance doubles to 400 N. P=Rv=400×20=8000 W."
+    },
+    {
+      "id": "WEP-ADV-029",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg particle moves at 4 m/s and a force does +30 J work. Find final speed.",
+      "options": [],
+      "correct_answer": "√46 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Initial K=16 J; final K=46 J. Since K=v² for m=2 kg, v=√46 m/s."
+    },
+    {
+      "id": "WEP-ADV-030",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 0.5 kg ball is thrown upward at 20 m/s. Ignore air resistance; g=10 m/s². Find maximum height.",
+      "options": [],
+      "correct_answer": "20 m",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Initial K=100 J. At top mgh=100, giving h=20 m."
+    },
+    {
+      "id": "WEP-ADV-031",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg block descends 3 m from rest while an opposing force of 5 N acts. g=10 m/s². Find bottom speed.",
+      "options": [],
+      "correct_answer": "3√5 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Gravity work=60 J; opposing work=−15 J. Net work=45 J=(1/2)(2)v², so v=3√5 m/s."
+    },
+    {
+      "id": "WEP-ADV-032",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 1 kg block's kinetic energy falls from 18 J to 2 J over 4 m due to a constant opposing force. Find its magnitude.",
+      "options": [],
+      "correct_answer": "4 N",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "ΔK=−16 J=−Fs, so F=4 N."
+    },
+    {
+      "id": "WEP-ADV-033",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg block starts from rest 5 m above a spring k=400 N/m on a frictionless track. g=10 m/s². Find maximum compression.",
+      "options": [],
+      "correct_answer": "√0.5 m",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "mgh=100 J=(1/2)kx². Thus x²=0.5 and x≈0.707 m."
+    },
+    {
+      "id": "WEP-ADV-034",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg block moves up a frictionless incline to height 1.8 m with initial speed 8 m/s. g=10 m/s². Find speed there.",
+      "options": [],
+      "correct_answer": "2√7 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Initial K=64 J; ΔU=36 J, so final K=28 J. Since K=v², v=√28=2√7 m/s."
+    },
+    {
+      "id": "WEP-ADV-035",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 1 kg block moving at 6 m/s stops while rising 1 m vertically on a rough incline. Find work by friction; g=10 m/s².",
+      "options": [],
+      "correct_answer": "−8 J",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Initial K=18 J; final K=0; ΔU=10 J. Friction work=Δ(K+U)=−18+10=−8 J."
+    },
+    {
+      "id": "WEP-ADV-036",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 3 kg block moving at 4 m/s is stopped by a spring k=600 N/m on a frictionless surface. Find maximum compression.",
+      "options": [],
+      "correct_answer": "√0.08 m",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Initial K=24 J=(1/2)600x². Hence x²=0.08 and x≈0.283 m."
+    },
+    {
+      "id": "WEP-ADV-037",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A particle moves under F(x)=3x²−4x N from x=0 to 2 m. Find work.",
+      "options": [],
+      "correct_answer": "0 J",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "W=∫₀²(3x²−4x)dx=[x³−2x²]₀²=0 J."
+    },
+    {
+      "id": "WEP-ADV-038",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg particle moves in U(x)=5x² J with total energy 40 J. Find speed at x=2 m.",
+      "options": [],
+      "correct_answer": "2√5 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "U(2)=20 J; K=20 J. With m=2, K=v², so v=√20=2√5 m/s."
+    },
+    {
+      "id": "WEP-ADV-039",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg particle moves under F=−kx with k=8 N/m. At x=0.5 m speed is 3 m/s. Find speed at x=1 m.",
+      "options": [],
+      "correct_answer": "√6 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "E=K+U=9+1=10 J. At x=1, U=4 J, K=6 J; v²=6, so v=√6 m/s."
+    },
+    {
+      "id": "WEP-ADV-040",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg body falls 5 m while constant upward air resistance is 10 N. g=10 m/s². Starting from rest, find speed after 5 m.",
+      "options": [],
+      "correct_answer": "5√2 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Gravity work=100 J, drag work=−50 J; net work=50 J=(1/2)(2)v², so v=√50=5√2 m/s."
+    },
+    {
+      "id": "WEP-ADV-041",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 1 kg particle moves under F(x)=12x−3x² N from x=0 to 4 m. Initial kinetic energy is 10 J. Find final kinetic energy.",
+      "options": [],
+      "correct_answer": "42 J",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Work=[6x²−x³]₀⁴=32 J. Final K=10+32=42 J."
+    },
+    {
+      "id": "WEP-ADV-042",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg block at 10 m/s crosses a rough 8 m patch with μk=0.5, then climbs a frictionless ramp. g=10 m/s². Find maximum rise above patch.",
+      "options": [],
+      "correct_answer": "1 m",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Initial K=100 J; friction removes 80 J. Remaining 20 J=mgh, so h=1 m."
+    },
+    {
+      "id": "WEP-ADV-043",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg particle starts at x=0 with speed 2 m/s under F(x)=10−4x N until x=3 m. Find final speed.",
+      "options": [],
+      "correct_answer": "4 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Initial K=4 J. Work=∫₀³(10−4x)dx=12 J. Final K=16 J; v=4 m/s."
+    },
+    {
+      "id": "WEP-ADV-044",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 1 kg block is projected up a 30° incline at 10 m/s. μk=1/√3 and g=10 m/s². Find stopping distance.",
+      "options": [],
+      "correct_answer": "5 m",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Retarding acceleration=10(1/2+1/2)=10 m/s². s=u²/(2a)=5 m."
+    },
+    {
+      "id": "WEP-ADV-045",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg particle starts from rest at x=0 under a force whose work is W(x)=5x−x² J. Find speed at x=3 m.",
+      "options": [],
+      "correct_answer": "√6 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "W(3)=6 J=K. For mass 2 kg, K=v², so v=√6 m/s."
+    },
+    {
+      "id": "WEP-ADV-046",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 4 kg block drops 2.5 m on a frictionless track and compresses a spring k=800 N/m. g=10 m/s². Find maximum compression.",
+      "options": [],
+      "correct_answer": "0.5 m",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "mgh=100 J=(1/2)800x²; x=0.5 m."
+    },
+    {
+      "id": "WEP-ADV-047",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg block moving at 6 m/s is brought to rest by a constant force over 4 m. Find force magnitude.",
+      "options": [],
+      "correct_answer": "9 N",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Initial K=36 J. Work=−36 J=−4F, so F=9 N."
+    },
+    {
+      "id": "WEP-ADV-048",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 1 kg particle moving at 5 m/s experiences net work −8 J. Find its final speed.",
+      "options": [],
+      "correct_answer": "3 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "Initial K=12.5 J; final K=4.5 J. v²=2K/m=9, so v=3 m/s."
+    },
+    {
+      "id": "WEP-ADV-049",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A 2 kg block slides down a frictionless track from height 3.2 m. Find speed at bottom, g=10 m/s².",
+      "options": [],
+      "correct_answer": "8 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "mgh=(1/2)mv², so v=√(2gh)=√64=8 m/s."
+    },
+    {
+      "id": "WEP-ADV-050",
+      "subject": "Physics",
+      "chapter": "Work, Energy and Power",
+      "difficulty": "JEE Advanced practice",
+      "origin": "Original practice question; not a PYQ",
+      "type": "numerical",
+      "question": "A force F(x)=10−2x N acts from x=0 to x=5 m on a 2 kg block initially at rest. Find final speed.",
+      "options": [],
+      "correct_answer": "5 m/s",
+      "marks": 4,
+      "negative_marks": 0,
+      "solution": "W=∫₀⁵(10−2x)dx=25 J. Final K=25 J=(1/2)(2)v², so v=5 m/s. (Check: v²=25.)"
+    }
+  ]
+}StudyOS — Redesign Navigation Dock with a More Menu
+
+Redesign the existing StudyOS navigation dock.
+
+Main requirement
+
+Keep exactly FIVE navigation items visible in the dock:
+
+1. Home
+2. Tasks
+3. Focus
+4. Library
+5. More
+
+The first four are the primary navigation destinations. More opens a secondary navigation menu containing all remaining features.
+
+More menu contents
+
+Organise the remaining features into logical categories.
+
+AI TOOLS
+
+* NOVA — AI Doubt Assistant
+* VECTRA — AI Test Generator
+* PULSE — AI Flashcards
+* LUMEN — AI Notes Studio
+* ECHO — Voice Learning
+
+SMART LEARNING
+
+* ORBIT — Study Planner
+* Mistake Notebook
+* Chapter Mastery
+* NEXUS — Knowledge Map
+* Concept Dependency Map
+* Formula Vault
+* PYQ Explorer
+
+EXAM PREPARATION
+
+* Mock Exam Simulator
+
+COMMUNITY
+
+* Study Rooms
+* Leaderboard
+
+PERSONAL
+
+* Insights
+* Achievements
+* Settings
+
+Include only features that already exist or have actually been implemented. Do not create fake or nonfunctional destinations for planned features.
+
+More menu interaction
+
+* Tapping More opens a polished secondary navigation panel.
+* On mobile and iPad, prefer a bottom sheet or suitable full-screen menu.
+* On desktop, use a suitable dropdown, side panel or navigation drawer.
+* Include clear icons, labels and categories.
+* Allow the user to close the menu easily.
+* Selecting a feature should navigate to its existing screen and close the menu.
+
+
+
+
+
+

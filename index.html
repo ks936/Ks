@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0d12">
+  <meta name="description" content="Your personal JEE study workspace">
+  <title>StudyOS — Your Study Space</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+    crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    crossorigin="anonymous"></script>
+  <script src="library/jee-class11.js"></script>
+  <script src="library/physics-chapter-notes.js"></script>
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <div id="auth-screen" class="auth-screen" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+    <section class="auth-card panel">
+      <div class="auth-brand"><span class="brand-icon">S</span><strong>StudyOS<span class="accent">.</span></strong></div>
+      <p class="eyebrow">WELCOME</p>
+      <h1 id="auth-title">Sign in to StudyOS</h1>
+      <p id="auth-description" class="muted">Your study progress, tests and rankings stay synced to your account.</p>
+      <div class="auth-tabs">
+        <button type="button" class="auth-tab active" data-auth-mode="login">Log in</button>
+        <button type="button" class="auth-tab" data-auth-mode="register">Create account</button>
+      </div>
+      <form id="auth-form" autocomplete="on">
+        <label id="auth-name-label" for="auth-name" hidden>Display name</label>
+        <input id="auth-name" name="name" maxlength="30" placeholder="Display name" autocomplete="name" hidden>
+        <label for="auth-username">Username</label>
+        <input id="auth-username" name="username" minlength="3" maxlength="30" placeholder="your_username" autocomplete="username" required>
+        <label for="auth-password">Password</label>
+        <input id="auth-password" name="password" type="password" minlength="8" maxlength="128" placeholder="At least 8 characters" autocomplete="current-password" required>
+        <button id="auth-submit" class="primary-button" type="submit">Log in</button>
+        <p id="auth-status" class="auth-status muted" role="status"></p>
+      </form>
+    </section>
+  </div>
+  <div class="app-shell auth-locked">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="StudyOS home">
+        <span class="brand-icon">S</span>
+        <span>StudyOS<span class="accent">.</span></span>
+      </a>
+
+      <div class="topbar-actions">
+        <button id="owner-export-button" class="secondary-button" type="button" hidden>Export all data</button>
+        <span id="auth-user-label" class="auth-user-label"></span>
+        <button id="auth-logout-button" class="secondary-button" type="button" hidden>Log out</button>
+        <button id="theme-button" class="icon-button"
+          aria-label="Open Settings">⚙</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="home" class="screen active">
+        <p class="eyebrow">YOUR PERSONAL JEE WORKSPACE</p>
+        <h1>Welcome to StudyOS<span class="accent">.</span></h1>
+        <p class="muted">Make progress, one focused session at a time.</p>
+
+        <div class="stats-grid">
+          <article class="panel">
+            <p class="muted">FOCUS TODAY</p>
+            <h2 id="focus-total">0 min</h2>
+          </article>
+          <article class="panel">
+            <p class="muted">TASKS COMPLETED</p>
+            <h2 id="tasks-total">0</h2>
+          </article>
+        </div>
+        <section class="panel xp-summary" id="xp-summary"></section>
+
+        <section class="tool-launchers" aria-label="StudyOS AI tools">
+          <button type="button" class="tool-launcher nova-launcher" data-open-screen="ai-doubts">
+            <span class="tool-mark nova-mark" aria-hidden="true">✦</span>
+            <span class="tool-launcher-copy"><strong>NOVA</strong><small>StudyOS Intelligence</small><span>Step-by-step help for Physics, Chemistry and Mathematics.</span></span>
+            <span class="tool-launcher-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button type="button" class="tool-launcher vectra-launcher" data-open-screen="ai-test">
+            <span class="tool-mark vectra-mark" aria-hidden="true">◈</span>
+            <span class="tool-launcher-copy"><strong>VECTRA</strong><small>StudyOS Assessment Engine</small><span>Build focused tests, review scores and spot weak topics.</span></span>
+            <span class="tool-launcher-arrow" aria-hidden="true">↗</span>
+          </button>
+        </section>
+
+        </section>
+<section id="tasks" class="screen">
+  <p class="eyebrow">YOUR STUDY PLAN</p>
+  <h1>My tasks<span class="accent">.</span></h1>
+  <p class="muted">Plan your work. Track your progress.</p>
+
+  <form id="task-form" class="panel task-form">
+    <label for="task-title">What do you need to study?</label>
+    <input
+      id="task-title"
+      type="text"
+      placeholder="e.g. Revise vectors"
+      maxlength="120"
+      required
+    >
+
+    <label for="task-subject">Subject</label>
+    <select id="task-subject">
+      <option value="Physics">Physics</option>
+      <option value="Chemistry">Chemistry</option>
+      <option value="Maths">Mathematics</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="task-priority">Priority</label>
+    <select id="task-priority">
+      <option value="normal">Normal</option>
+      <option value="high">High</option>
+    </select>
+
+    <button type="submit" class="primary-button">+ Add task</button>
+    <p id="task-message" class="muted" role="status"></p>
+  </form>
+
+  <div class="task-toolbar">
+    <button type="button" class="secondary-button task-filter active"
+      data-filter="all">All</button>
+    <button type="button" class="secondary-button task-filter"
+      data-filter="pending">Pending</button>
+    <button type="button" class="secondary-button task-filter"
+      data-filter="completed">Completed</button>
+  </div>
+
+  <div id="task-content" aria-live="polite"></div>
+</section>
+
+
+
+      <section id="focus" class="screen">
+        <h1>Focus room</h1>
+        <p class="muted">Choose a mode and concentrate.</p>
+        <div class="panel timer-panel">
+          <div class="timer-modes" id="timer-modes">
+            <button type="button" class="timer-mode active" data-minutes="25">Pomodoro</button>
+            <button type="button" class="timer-mode" data-minutes="5">Short Break</button>
+            <button type="button" class="timer-mode" data-minutes="15">Long Break</button>
+          </div>
+          <div class="timer-ring" id="timer-ring">
+            <div class="timer-ring-inner"><div id="timer-display">25:00</div><small id="timer-state">Ready</small></div>
+          </div>
+          <div class="custom-duration"><label for="timer-custom">Custom minutes</label><input id="timer-custom" type="number" min="1" max="180" value="25"></div>
+          <div class="button-row">
+            <button id="timer-start" class="primary-button">Start</button>
+            <button id="timer-reset" class="secondary-button">Reset</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="library" class="screen">
+        <h1>Study library</h1>
+        <p class="muted">Your subjects, chapters, notes and mistakes.</p>
+        <div class="library-toolbar panel">
+          <label for="library-search">Search notes, chapters, topics or formulas</label>
+          <input id="library-search" type="search"
+            placeholder="Search Physics, vector, friction, formula..." autocomplete="off">
+          <div class="library-filter-row">
+            <label for="library-scope">Syllabus filter</label>
+            <select id="library-scope">
+              <option value="all">All chapters</option>
+              <option value="included">Included in Class 11 JEE</option>
+              <option value="not-yet-created">Not yet written</option>
+              <option value="out-of-syllabus">Out of syllabus</option>
+            </select>
+          </div>
+          <p id="library-search-status" class="muted" role="status"></p>
+        </div>
+        <div class="subject-grid">
+          <button class="subject-card" data-subject="Physics">Physics</button>
+          <button class="subject-card" data-subject="Chemistry">Chemistry</button>
+          <button class="subject-card" data-subject="Maths">Mathematics</button>
+        </div>
+        <div id="subject-content"></div>
+        <div id="saved-doubts-content" aria-live="polite" hidden></div>
+        <button id="open-test-lab" class="primary-button">
+          Open VECTRA Practice
+        </button>
+      </section>
+
+      <section id="testlab" class="screen">
+        <div class="testlab-header">
+          <div>
+            <p class="eyebrow">VECTRA · STUDYOS PRACTICE</p>
+            <h1>VECTRA Practice<span class="accent">.</span></h1>
+          </div>
+          <button id="testlab-back" class="secondary-button" type="button">
+            Back to Library
+          </button>
+        </div>
+        <div id="testlab-content" aria-live="polite"></div>
+      </section>
+
+      <section id="ai-doubts" class="screen nova-screen">
+        <div class="doubt-header">
+          <div>
+            <p class="eyebrow nova-eyebrow">NOVA · STUDYOS INTELLIGENCE</p>
+            <h1 class="nova-heading"><span class="identity-mark">✦</span> NOVA<span class="accent">.</span></h1>
+            <p class="muted identity-subtitle">Academic doubt assistant · Physics, Chemistry and Mathematics</p>
+          </div>
+          <button id="doubt-clear-history" type="button"
+            class="secondary-button">Clear conversation</button>
+        </div>
+
+        <div class="doubt-layout">
+          <aside class="panel doubt-settings nova-panel" aria-label="NOVA subject settings">
+            <label for="doubt-subject">Subject</label>
+            <select id="doubt-subject">
+              <option value="Physics">Physics</option>
+              <option value="Chemistry">Chemistry</option>
+              <option value="Mathematics">Mathematics</option>
+            </select>
+
+            <label for="doubt-chapter">Chapter (optional)</label>
+            <select id="doubt-chapter">
+              <option value="">No chapter selected</option>
+            </select>
+
+            <label for="doubt-image-input" class="doubt-upload-label">
+              Attach image
+            </label>
+            <input id="doubt-image-input" type="file" accept="image/*"
+              capture="environment" hidden>
+            <div id="doubt-image-preview" class="doubt-image-preview"></div>
+          </aside>
+
+          <section class="doubt-conversation-panel panel nova-panel">
+            <div id="doubt-status" class="doubt-status muted" role="status"></div>
+            <div class="doubt-suggestions" aria-label="Suggested prompts">
+              <button type="button" data-prompt="Explain this concept with a simple example">Simple example</button>
+              <button type="button" data-prompt="Give me a step-by-step solution and verify the result">Step-by-step</button>
+              <button type="button" data-prompt="Show common mistakes and the quickest approach">Common mistakes</button>
+            </div>
+            <div id="doubt-conversation" class="doubt-conversation"
+              aria-live="polite"></div>
+
+            <div class="doubt-actions">
+              <button id="doubt-hint-action" type="button"
+                class="secondary-button">Give me a hint first</button>
+              <button id="doubt-simple-action" type="button"
+                class="secondary-button">Explain more simply</button>
+            </div>
+
+            <form id="doubt-form" class="doubt-form">
+              <label class="hidden" for="doubt-input">Ask a JEE doubt</label>
+              <textarea id="doubt-input" rows="3"
+                maxlength="4000"
+                placeholder="Type your question or explain what you tried..."
+                required></textarea>
+              <button id="doubt-send" type="submit"
+                class="primary-button">Send</button>
+            </form>
+          </section>
+        </div>
+      </section>
+
+      <section id="ai-test" class="screen vectra-screen">
+        <div class="ai-test-header">
+          <div>
+            <p class="eyebrow vectra-eyebrow">VECTRA · STUDYOS ASSESSMENT ENGINE</p>
+            <h1 class="vectra-heading"><span class="identity-mark">◈</span> VECTRA<span class="accent">.</span></h1>
+            <p class="muted identity-subtitle">Generate academic tests, evaluate answers and find topics to strengthen.</p>
+          </div>
+          <button id="ai-test-reset" type="button"
+            class="secondary-button">New test</button>
+        </div>
+
+        <div class="ai-test-layout">
+          <form id="ai-test-form" class="panel ai-test-settings vectra-panel">
+            <label for="ai-test-subject">Subject</label>
+            <select id="ai-test-subject">
+              <option value="Physics">Physics</option>
+              <option value="Chemistry">Chemistry</option>
+              <option value="Mathematics">Mathematics</option>
+            </select>
+
+            <label for="ai-test-chapter">Chapter</label>
+            <select id="ai-test-chapter"></select>
+
+            <label for="ai-test-difficulty">Difficulty</label>
+            <select id="ai-test-difficulty">
+              <option value="JEE Main">JEE Main</option>
+              <option value="JEE Advanced">JEE Advanced</option>
+              <option value="Mixed">Mixed</option>
+            </select>
+
+            <label for="ai-test-count">Questions</label>
+            <select id="ai-test-count">
+              <option value="5">5 questions</option>
+              <option value="10">10 questions</option>
+            </select>
+
+            <button id="ai-test-generate" type="submit"
+              class="primary-button">Generate test</button>
+            <p id="ai-test-status" class="muted" role="status"></p>
+          </form>
+
+          <div class="ai-test-workspace panel vectra-panel">
+            <div id="ai-test-content" aria-live="polite">
+              <div class="ai-test-empty">
+                <span>✦</span>
+                <h2>Build a focused VECTRA assessment</h2>
+                <p class="muted">Choose a subject, chapter and difficulty to generate a scored test.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="learning-studio" class="screen learning-studio">
+        <p class="eyebrow">YOUR PERSONAL LEARNING SYSTEM</p>
+        <h1>Learning studio<span class="accent">.</span></h1>
+        <p class="muted">Review, plan and strengthen your understanding across Physics, Chemistry and Mathematics.</p>
+        <div class="studio-tabs" role="tablist" aria-label="Learning tools">
+          <button class="studio-tab active" type="button" data-studio="pulse">PULSE</button>
+          <button class="studio-tab" type="button" data-studio="orbit">ORBIT</button>
+          <button class="studio-tab" type="button" data-studio="mistakes">Mistakes</button>
+          <button class="studio-tab" type="button" data-studio="mastery">Mastery</button>
+          <button class="studio-tab" type="button" data-studio="formulas">Formula Vault</button>
+          <button class="studio-tab" type="button" data-studio="lumen">LUMEN</button>
+          <button class="studio-tab" type="button" data-studio="echo">ECHO</button>
+          <button class="studio-tab" type="button" data-studio="nexus">NEXUS</button>
+          <button class="studio-tab" type="button" data-studio="exams">Exams &amp; PYQs</button>
+        </div>
+        <div id="studio-content" aria-live="polite"></div>
+      </section>
+
+      <section id="insights" class="screen">
+        <h1>Insights</h1>
+        <p class="muted">Understand your study progress.</p>
+        <div id="analytics-content" class="analytics-content"></div>
+      </section>
+
+      <section id="achievements" class="screen">
+        <p class="eyebrow">YOUR PROGRESS</p>
+        <h1>Achievements<span class="accent">.</span></h1>
+        <div id="achievement-level-card"></div>
+        <div id="achievement-grid" class="achievement-grid"></div>
+      </section>
+
+      <section id="leaderboard" class="screen">
+        <p class="eyebrow">COMMUNITY RANKINGS</p>
+        <h1>Leaderboards<span class="accent">.</span></h1>
+        <p class="muted local-ranking-note">Rankings sync across devices through your StudyOS profile.</p>
+        <div class="leaderboard-tabs">
+          <button type="button" class="leaderboard-tab active" data-board="xp">XP Rankings</button>
+          <button type="button" class="leaderboard-tab" data-board="tests">Test Rankings</button>
+        </div>
+        <div id="leaderboard-content"></div>
+      </section>
+
+      <section id="settings" class="screen">
+        <p class="eyebrow">PERSONALIZE STUDYOS</p>
+        <h1>Settings<span class="accent">.</span></h1>
+        <div class="settings-layout">
+          <section class="panel profile-settings">
+            <h2>Profile</h2>
+            <label for="profile-name">Display name</label>
+            <input id="profile-name" maxlength="30" autocomplete="nickname">
+            <label for="avatar-choice">Avatar</label>
+            <div id="avatar-choice" class="avatar-choice">
+              <button type="button" data-avatar="🧑‍🚀">🧑‍🚀</button><button type="button" data-avatar="🦊">🦊</button>
+              <button type="button" data-avatar="🐯">🐯</button><button type="button" data-avatar="🌙">🌙</button>
+              <button type="button" data-avatar="🎓">🎓</button><button type="button" data-avatar="⚡">⚡</button>
+            </div>
+            <label for="theme-presets">Built-in theme</label>
+            <select id="theme-presets">
+              <option value="midnight">Midnight</option>
+              <option value="aurora">Aurora</option>
+              <option value="cyberpunk">Cyberpunk</option>
+              <option value="ocean">Ocean</option>
+              <option value="sakura">Sakura</option>
+              <option value="light">Light</option>
+            </select>
+            <h3>Liquid Glass</h3>
+            <label class="ios-setting-row" for="glass-toggle">
+              <span>Glass effects</span>
+              <input id="glass-toggle" type="checkbox" checked>
+            </label>
+            <label for="glass-intensity">Glass intensity</label>
+            <input id="glass-intensity" type="range" min="0" max="100" value="72">
+            <label for="corner-style">Corner style</label>
+            <select id="corner-style">
+              <option value="soft">Soft</option>
+              <option value="round">iOS Round</option>
+              <option value="compact">Compact</option>
+            </select>
+            <label class="ios-setting-row" for="reduced-motion">
+              <span>Reduce motion</span>
+              <input id="reduced-motion" type="checkbox">
+            </label>
+          </section>
+          <section class="panel theme-studio">
+            <h2>AI Theme Studio</h2>
+            <p class="muted">Describe an appearance. This studio safely generates structured color palettes; no generated CSS or code is executed.</p>
+            <label for="theme-prompt">Theme description</label>
+            <textarea id="theme-prompt" rows="3" placeholder="Example: a calm midnight blue with lavender accents"></textarea>
+            <div class="theme-actions"><button type="button" id="theme-generate" class="primary-button">Generate palette</button><button type="button" id="theme-random" class="secondary-button">Surprise me</button></div>
+            <div id="theme-preview" class="theme-preview"></div>
+            <div class="theme-editor-head"><h3>Manual color editor</h3><button type="button" id="theme-save" class="secondary-button">Save theme</button></div>
+            <div id="theme-editor" class="theme-editor"></div>
+            <h3>Saved themes</h3>
+            <div id="saved-themes" class="saved-theme-grid"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div id="more-menu-backdrop" class="more-menu-backdrop" hidden></div>
+    <aside id="more-menu" class="more-menu" role="dialog" aria-modal="true" aria-labelledby="more-menu-title" hidden>
+      <div class="more-menu-header">
+        <div>
+          <p class="eyebrow">STUDYOS</p>
+          <h2 id="more-menu-title">More</h2>
+        </div>
+        <button id="more-menu-close" class="icon-button more-menu-close" type="button" aria-label="Close More menu">×</button>
+      </div>
+      <div class="more-menu-scroll">
+        <section class="more-menu-category">
+          <h3>AI TOOLS</h3>
+          <div class="more-menu-grid">
+            <button class="more-menu-item" type="button" data-screen="ai-doubts"><span>✦</span><strong>NOVA</strong><small>AI Doubt Assistant</small></button>
+            <button class="more-menu-item" type="button" data-screen="ai-test"><span>◈</span><strong>VECTRA</strong><small>AI Test Generator</small></button>
+            <button class="more-menu-item" type="button" data-studio="pulse"><span>⚡</span><strong>PULSE</strong><small>AI Flashcards</small></button>
+            <button class="more-menu-item" type="button" data-studio="lumen"><span>◉</span><strong>LUMEN</strong><small>AI Notes Studio</small></button>
+            <button class="more-menu-item" type="button" data-studio="echo"><span>◖</span><strong>ECHO</strong><small>Voice Learning</small></button>
+          </div>
+        </section>
+        <section class="more-menu-category">
+          <h3>SMART LEARNING</h3>
+          <div class="more-menu-grid">
+            <button class="more-menu-item" type="button" data-studio="orbit"><span>◎</span><strong>ORBIT</strong><small>Study Planner</small></button>
+            <button class="more-menu-item" type="button" data-studio="mistakes"><span>!</span><strong>Mistake Notebook</strong><small>Review errors</small></button>
+            <button class="more-menu-item" type="button" data-studio="mastery"><span>◫</span><strong>Chapter Mastery</strong><small>Track accuracy</small></button>
+            <button class="more-menu-item" type="button" data-studio="nexus"><span>⌘</span><strong>NEXUS</strong><small>Knowledge Map</small></button>
+            <button class="more-menu-item" type="button" data-studio="formulas"><span>ƒ</span><strong>Formula Vault</strong><small>Saved formulas</small></button>
+            <button class="more-menu-item" type="button" data-studio="exams"><span>⌕</span><strong>PYQ Explorer</strong><small>Question sources</small></button>
+          </div>
+        </section>
+        <section class="more-menu-category">
+          <h3>EXAM PREPARATION</h3>
+          <div class="more-menu-grid">
+            <button class="more-menu-item" type="button" data-screen="testlab"><span>▣</span><strong>Mock Exam Simulator</strong><small>Timed practice</small></button>
+          </div>
+        </section>
+        <section class="more-menu-category">
+          <h3>COMMUNITY</h3>
+          <div class="more-menu-grid">
+            <button class="more-menu-item" type="button" data-screen="leaderboard"><span>♛</span><strong>Leaderboard</strong><small>Study rankings</small></button>
+          </div>
+        </section>
+        <section class="more-menu-category">
+          <h3>PERSONAL</h3>
+          <div class="more-menu-grid">
+            <button class="more-menu-item" type="button" data-screen="insights"><span>▥</span><strong>Insights</strong><small>Study progress</small></button>
+            <button class="more-menu-item" type="button" data-screen="achievements"><span>◆</span><strong>Achievements</strong><small>Your milestones</small></button>
+            <button class="more-menu-item" type="button" data-screen="settings"><span>⚙</span><strong>Settings</strong><small>Profile and themes</small></button>
+          </div>
+        </section>
+      </div>
+    </aside>
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button class="nav-item active" type="button" data-screen="home"><span>⌂</span><small>Home</small></button>
+      <button class="nav-item" type="button" data-screen="tasks"><span>☑</span><small>Tasks</small></button>
+      <button class="nav-item" type="button" data-screen="focus"><span>◷</span><small>Focus</small></button>
+      <button class="nav-item" type="button" data-screen="library"><span>▤</span><small>Library</small></button>
+      <button class="nav-item" id="more-nav-item" type="button" aria-haspopup="dialog" aria-expanded="false"><span>•••</span><small>More</small></button>
+    </nav>
+  </div>
+</body>
+</html>
